@@ -27,25 +27,38 @@
       <h5><span class="glyphicon glyphicon-time"></span> Actualizado el: Nov 15, 2017.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
       <div class="panel panel-default">
-        <div class="panel-heading">Actualizar la base de datos. <cite style="color: red">*(Nota: )</cite></div>
+        <div class="panel-heading">Actualizar la base de datos. <cite style="color: red">*(Nota: el archivo debe estar en formato .txt)</cite></div>
         <div class="panel-body">
-          <form class="form-inline" method="post">
-            <div class="form-group">
+          <?php echo form_open_multipart('carga/do_upload');?>
+          <div class="form-group">
               <table>
                 <tr>
                   <td><h1><strong>1er. Paso&nbsp;&nbsp;</strong></h1></td>
                   <td>
                     <label for="sel1">Buscar archivo .TXT :</label>
-                    <input type="file" class="form-control" name="archivo">
+                    <input type="file" class="form-control" name="userfile" size="1024" />
                   </td>
                 </tr>                 
                 <tr>
                   <td><h1><strong>2do. Paso&nbsp;&nbsp;</strong></h1></td>
                   <td><button type="submit" class="btn btn-success"><spam class="glyphicon glyphicon-refresh"></spam>&nbsp;&nbsp;ACTUALIZAR</button></td>
                 </tr>
-              </table>
+              </table>              
             </div>
-          </form><br />
+          </form>
+          <?php
+              if(isset($error)){
+                  echo "<strong style='color:red;'>".$error."</strong>";
+              }
+               
+              if(isset($upload_data)){
+              ?>
+                <div class="alert alert-success">
+                  <strong>Success!</strong> La actuializaciòn de la base de datos fue exitosa ....
+                </div>
+              <?php
+              }
+              ?>
         </div>
       </div>
     </div>

@@ -77,6 +77,8 @@
           </table>
         </div>
         <div class="panel-body">
+          <script src="https://code.highcharts.com/highcharts.js"></script>
+          <script src="https://code.highcharts.com/modules/exporting.js"></script>
           <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>
       </div>
@@ -120,8 +122,8 @@ Highcharts.chart('container', {
     layout: 'vertical',
     align: 'left',
     verticalAlign: 'top',
-    x: 100,
-    y: 100,
+    x: 200,
+    y: 200,
     floating: true,
     borderWidth: 1,
     backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'

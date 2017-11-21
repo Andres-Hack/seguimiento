@@ -50,6 +50,9 @@
       <div class="panel panel-default">
         <div class="panel-heading">Datos de Busqueda</div>
         <div class="panel-body">
+          <script src="https://code.highcharts.com/highcharts.js"></script>
+          <script src="https://code.highcharts.com/modules/data.js"></script>
+          <script src="https://code.highcharts.com/modules/exporting.js"></script>
           <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
           <table id="datatable">
               <thead>

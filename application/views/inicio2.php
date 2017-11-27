@@ -100,19 +100,18 @@
           <table class="egt">
             <tr>
               <td style="color: red"><strong>Tipo : </strong></td>
-              <td>&nbsp;&nbsp;<?php foreach($mensaje as $fila){ echo $fila->estado; }?></td>
+              <td></td>
             </tr>
             <tr>
               <td style="color: red"><strong>Gestion de aprovación : </strong></td>
-              <td>&nbsp;&nbsp;<?php foreach($mensaje as $fila){ echo $fila->gestion_aprobacion; }?></td>
+              <td></td>
             </tr>
             <tr>
               <td style="color: red"><strong>Nombre de proyecto : </strong></td>
-              <td>&nbsp;&nbsp;<?php foreach($mensaje as $fila){ echo $fila->proyecto_nombre; }?></td>
+              <td></td>
             </tr>
             <tr>
               <td style="color: red"><strong>Codigo : </strong></td>
-              <td>&nbsp;&nbsp;<?= $x ?></td>
             </tr>
           </table>
         </div>
@@ -206,28 +205,10 @@ Highcharts.chart('container', {
   },
   series: [{
     name: 'Avance financiero.',
-    data: [
-    <?php
-    foreach($consulta as $fila)
-    {
-      ?>
-      <?= $fila->av_financiero?>,
-      <?php
-    }
-    ?>
-    ]
+    data: [0,0,0,0,0,0,0,0,0,0]
   }, {
     name: 'Avance fisico.',
-    data: [
-    <?php
-    foreach($consulta as $fila)
-    {
-      ?>
-      <?= $fila->av_fisico?>,
-      <?php
-    }
-    ?>
-    ]
+    data: [0,0,0,0,0,0,0,0,0,0]
   },  ]
 });
 

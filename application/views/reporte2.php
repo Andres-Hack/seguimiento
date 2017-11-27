@@ -86,7 +86,7 @@ footer {
 
 Highcharts.chart('container', {
     title: {
-        text: 'Porcentaje de avance del departamento "<?= $dep ?>"'
+        text: 'Porcentaje de avance del departamento'
     },
     xAxis: {
         categories: [
@@ -115,39 +115,15 @@ Highcharts.chart('container', {
     series: [{
         type: 'column',
         name: 'Avance financiero.',
-        data: [
-        <?php
-        for ($i = 1; $i <= 10; $i++) {
-        ?>
-          <?= number_format($av_financiero[$i], 2, '.', ''); ?>,
-        <?php
-        }
-        ?>
-        ]
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     }, {
         type: 'column',
         name: 'Avance fisico.',
-        data: [
-        <?php
-        for ($j = 1; $j <= 10; $j++) {
-        ?>
-          <?= number_format($av_fisico[$j], 2, '.', ''); ?>,
-        <?php
-        }
-        ?>
-        ]
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     }, {
         type: 'spline',
         name: 'Avance',
-        data: [
-        <?php
-        for ($k = 1; $k <= 10; $k++) {
-        ?>
-          <?= number_format($x2[$k], 2, '.', ''); ?>,
-        <?php
-        }
-        ?>
-        ],
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         marker: {
             lineWidth: 2,
             lineColor: Highcharts.getOptions().colors[3],
@@ -158,11 +134,11 @@ Highcharts.chart('container', {
         name: 'Total consumption',
         data: [{
             name: 'Avance financiero.',
-            y: <?= $prom1 ?>,
+            y: 0,
             color: Highcharts.getOptions().colors[0] // Jane's color
         }, {
             name: 'Avance fisico.',
-            y: <?= $prom2 ?>,
+            y: 0,
             color: Highcharts.getOptions().colors[1] // John's color
         }],
         center: [100, 80],

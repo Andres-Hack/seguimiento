@@ -7,7 +7,7 @@
       <img src="<?= base_url() ?>plantillas/image/mopsv.png" class="img-responsive" alt=""><br />
       <ul class="nav nav-pills nav-stacked">
         <li><a href="<?= base_url() ?>">Inicio</a></li>
-        <li class="active" ><a href="<?= base_url() ?>carga">Subir CSV</a></li>
+        <li class="active" ><a href="<?= base_url() ?>carga">Actualizar DB</a></li>
         <li><a href="<?= base_url() ?>reporte">Reportes por Departamento</a></li>
         <li><a href="#section3">Buscar</a></li>
       </ul><br>
